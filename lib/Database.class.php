@@ -4,8 +4,9 @@
  * Usage : 
  * $dbLink = new Database();
  * 
- * $req1 = $dbLink->execute('SELECT * FROM users');
- * $req2 = $dbLink->execute('SELECT * FROM users WHERE username = :username', ['username' => 'rigwild']);
+ * $req1 = $dbLink->select('SELECT * FROM users');
+ * $req2 = $dbLink->select('SELECT * FROM users WHERE username = :username', ['username' => 'rigwild']);
+ * $req3 = $dbLink->execute('INSERT INTO users VALUES (:username), ['username' => 'rigwild']);
  * 
  * The link with the database is established once on each reload.
  * 
